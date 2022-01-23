@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(180deg, white 50%, #303053 50%);
+}
+.formElm{
+    background: white;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 12px 12px 22px #1c1b1c;
+}
+.btn1{
+    border:none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    background-color: #05cbf7;
+    color:white;
+    font-weight: bold;
+
+}
+.accc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-group-text {
+    background: #05cbf7 !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+    size:20px;
+}
+.input-group-text i.fas{
+    font-size: 1.6rem;
+}
+
+/* #messages{
+    background-color: #c7c706;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-top: 10px;
+  } */

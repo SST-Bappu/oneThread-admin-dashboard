@@ -1,0 +1,57 @@
+<div class="card mt-5">
+    <div class="card-body">
+        <div class="search-box sear">
+            <h4 class="header-title">Todays Order List</h4>
+            <form  method="POST">
+                {% csrf_token %}
+                <input type="text" name="search"  placeholder="Search..." required>
+                <button type="submit"><i class="ti-search"></i></button>
+            </form>
+        </div>
+        <div class="table-responsive">
+            <table class="dbkit-table">
+                <tbody>
+                    <tr class="heading-td">
+                        <td>Name</td>
+                        <td>Unique Name</td>
+                        <td>Number of Colleagues</td>
+                        <td>Number of Projects</td>
+                        <td>Subscription Activation</td>
+                        <!-- <td>Subscription Issue Date</td> -->
+                        <td>Subscription Expire Date</td>
+                        <td>Created Date</td>
+                        <!-- <td>Payment</td> -->
+                    </tr>
+        
+                    {%for company in companies %}
+                    <tr>
+                        <td>{{company.name}}</td>
+                        <td>{{company.uniqueName}}</td>
+                        <td>{{company.collegues}}</td>
+                        <td>{{company.projects}}</td>
+                        <td>{{company.Subs_activation}}</td>
+                        <td>{{company.subs_expireDate}}</td>
+                        <td>{{company.created_at}}</td>
+                        
+                    </tr>
+                    {%endfor%}
+        
+        
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination_area pull-right mt-5">
+            <ul>
+                {%if users.has_previous %}
+                    <li><a href="{%url 'company' %}?page={{users.previous_page_number}}"><i class="fa fa-chevron-left"></i></a></li>
+                    <li><a href="{%url 'company' %}?page=1"><span>1</span></a></li>
+                {%endif%}
+                
+                <li><span>Page {{users.number}} of {{users.paginator.num_pages}}</span></li>
+                {%if users.has_next %}
+                    <li><a href="{%url 'unverusers' %}?page={{users.next_page_number}}"><i class="fa fa-chevron-right"></i></a></li>
+                {%endif%}
+            </ul>
+        </div>
+    </div>
+</div>

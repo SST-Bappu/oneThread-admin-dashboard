@@ -1,0 +1,94 @@
+{%load static%}
+
+
+    <!-- sidebar menu area start -->
+    <div class="sidebar-menu">
+        <div class="sidebar-header">
+            <div class="logo">
+                <a href="#"><img src="{% static 'images/dasg_head.png' %}" alt="logo"></a>
+            </div>
+        </div>
+        <div class="main-menu">
+            <div class="menu-inner">
+                <nav>
+                    <ul class="metismenu" id="menu">
+                        <li class="">
+                            <a href="#" aria-expanded="true"><i class="ti-dashboard"></i><span>Blogs</span></a>
+                        </li>
+                        <li>
+                            <a href="#" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Users</span></a>
+                            <ul class="collapse">
+                                <li><a href="{% url 'usergrowth'%}">Growth Rate</a></li>
+                                <li><a href="{%url 'allusers'%}">All Users</a></li>
+                                <li><a href="{% url 'verusers'%}">Verified Users</a></li>
+                                <li><a href="{% url 'unverusers'%}">Unverified Users</a></li>
+                            </ul>
+                            
+                        </li>
+                        <li>
+                            <a href="{% url 'company' %}" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Company</span></a>
+                            
+                        </li>
+                        <li>
+                            <a href="#" aria-expanded="true"><i class="ti-pie-chart"></i><span>Feedbacks</span></a>
+                            
+                        </li>
+                        <li>
+                            <a href="#" aria-expanded="true"><i class="ti-palette"></i><span>Reports</span></a>
+                            
+                        </li>
+                        <li>
+                            <a href="#" aria-expanded="true"><i class="ti-slice"></i><span>Emails</span></a>
+                            
+                        </li>
+                        <li>
+                            <a href="#" aria-expanded="true"><i class="fa fa-table"></i>
+                                <span>Contact Messages</span></a>
+                        </li>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar menu area end -->
+    <!-- main content area start -->
+    
+        <!-- header area start -->
+        
+        <!-- header area end -->
+        <!-- page title area start -->
+        
+        <div class="page-title-area">
+            <div class="row align-items-center">
+                <div class="col-md-1 col-sm-1 clearfix">
+                    <div class="nav-btn pull-left">
+                        <i class="ti-angle-double-left"></i>
+                        <i class="ti-angle-double-right"></i>
+                        
+                        
+
+                
+                    </div>
+
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="breadcrumbs-area clearfix">
+                        
+                        <h4 class="page-title pull-left">Dashboard</h4>
+                        
+                        
+                    </div>
+                </div>
+              
+                <div class="col-sm-6 clearfix">
+                    <div class="user-profile pull-right">
+                        <!-- <img class="avatar user-thumb" src="{% static 'images/avatar.png' %}" alt="avatar"> -->
+\                        <h4 class="user-name dropdown-toggle" data-toggle="dropdown">{{username}}<i class="fa fa-angle-down"></i></h4>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="logout">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
